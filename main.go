@@ -2,6 +2,7 @@ package main
 
 import (
 	"DataStructuresGolang/linkedlist"
+	"DataStructuresGolang/stack"
 	"fmt"
 )
 
@@ -16,4 +17,11 @@ func main() {
 	println()
 	fmt.Printf("element removed %v and list: %v", list.RemoveAfter(nodeAt3), list.String())
 	fmt.Printf("reversed list : %v", list.Reverse())
+	println()
+
+	aStack := stack.CreateFrom([]string{"a", "b", "c", "d"})
+	println(aStack.String())
+
+	expression := "(2 + 2) - (1 + 2) * 3"
+	println(stack.CheckParentheses(expression))
 }
